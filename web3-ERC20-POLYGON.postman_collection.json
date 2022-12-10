@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "791dc6e4-9917-4af4-beac-f51e10db642f",
+		"name": "web3-ERC20-POLYGON",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:4000/api/v1/ethereum/generateAccount",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/v1/newaccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"newaccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/v1/ethereum/getBalance/0x84284E88746eD8C2D5447e1170f86E2c2Ae0F577",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/v1/gettokenbalance/0xCe5f79E59fF216B817DDDB064f0159d8647553eD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"gettokenbalance",
+						"0xCe5f79E59fF216B817DDDB064f0159d8647553eD"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/v1/ethereum/transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n     \"fromaddress\" : \"0xEA81f312cA0Be42122b5bF44e248a63aC8098b38\",\n     \"receiveraddress\":\"0xCe5f79E59fF216B817DDDB064f0159d8647553eD\",\n  \"privatekey\":\"8b1372bfac7bfcdb7cbad51bddd24ac3dd10450f02e8d54afc89331025c89d96\",\n     \"recieveramount\" : 1\n \n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/v1/transfertoken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"transfertoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/v1/ethereum/getTransactionDetails/0x94756e1f736ac91137218c355f1301bfa24abb80cf14bda94ee4518c6802f5d9",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/v1/ethereum/getTransactionDetails/0x94756e1f736ac91137218c355f1301bfa24abb80cf14bda94ee4518c6802f5d9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"ethereum",
+						"getTransactionDetails",
+						"0x94756e1f736ac91137218c355f1301bfa24abb80cf14bda94ee4518c6802f5d9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/v1/tether/getTransactionDetails/0x1ba7d07e6f1adc59e13f65757461d29ad406a8f4940f8dacd112120e1b8f8d56",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/v1/tether/getTransactionDetails/0x46011d246d88d7d2494a1513d323c9e6b66a59bbcc94110b4d766a2d96b4a64f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"tether",
+						"getTransactionDetails",
+						"0x46011d246d88d7d2494a1513d323c9e6b66a59bbcc94110b4d766a2d96b4a64f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/v1/tether/transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"userId\":\"123\",\n     \"fromAccount\" : \"0x56dbc320e6aA023CD763F833fA4cC276A80fc43e\",\n     \"toAccount\":\"0xbABD6E9Ae732b77690DD5dC113e8ee355173fe24\",\n     \"cryptanosTxId\":\"123456\",\n     \"amount\":\"1\",\n     \"fromAccountEncryptedData\" : { \n        \"iv\": \"1d4569e7d684dd7d6fcb8f7e77b949e7\",\n        \"content\": \"21e5772841bd737049f86dacd3251c922f556534bf6bc90b230a17fd034a6a9ff11378e63f9b7f506b2bcdc160caa37a1d9846fdd956838dba284c89db0507c9b923\"\n       }\n\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/v1/tether/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"tether",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
