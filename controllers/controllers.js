@@ -9,11 +9,6 @@ const finalcontractabi=contractabi;
 
 //before moving into production move owner and private key to .env or kms
 
-const owner = constants.owner; //keep owner address
-
-const ownerprivatekey = '8b1372bfac7bfcdb7cbad51bddd24ac3dd10450f02e8d54afc89331025c89d96' //private key of owner address
-
-
 
 //paste your contract address here
 const contractaddress=constants.contractaddress

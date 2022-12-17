@@ -1,7 +1,3 @@
-
-
-
-
 module.exports = Object.freeze({
     owner:'0xEA81f312cA0Be42122b5bF44e248a63aC8098b38',
     contractaddress: '0x260bafd7dca3dd7b3b25765f667add3016b2f9a0',
