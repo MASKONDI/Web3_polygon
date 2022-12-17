@@ -125,21 +125,21 @@ const token={
                     contractaddress
                );
                    const account = web3.utils.checkAddressChecksum(receiveraddress)
-                   console.log("135");
+                
                    if (account==false) return res.status(500).json({msg:"invalid reciever address"})
                    
                    const sendamount =  recieveramount*1000000
-                   console.log("send amount",sendamount);
+       
                    const finalamount=sendamount.toString();
                     
 
-                     console.log("141",finalamount);
-                   const mint =await tetherToken.methods.transfer(receiveraddress,1)
+            
+                   const mint =await tetherToken.methods.transfer(receiveraddress,finalamount)
                    const gas= await mint.estimateGas({from:fromaddress})
                    const data=mint.encodeABI();
-                  console.log("141");
+          
                    const nonce= await web3.eth.getTransactionCount(fromaddress)
-                   console.log("nonce",nonce);
+
                    const signedTx = await web3.eth.accounts.signTransaction({
                             to:tetherToken.options.address,
                             data,
